@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    emailjs.init("qxGAtAogQ4DPOelIm");
+  </script>
+</head>
+<body>
+  <h1 style="text-align: center;">Student Registration Form</h1>
+  <form id="registration-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <span id="name-error"></span>
+    <br><br>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required><br>
+    <span id="dob-error"></span>
+    <br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required><br>
+    <span id="phone-error"></span><br>
+
+    <label for="email">Email ID:</label>
+    <input type="email" id="email" name="email" required><br>
+    <button type="button" id="send-otp">Send OTP</button>
+    <span id="email-error"></span>
+    <br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required><br>
+    <span id="age-error"></span>
+    <br>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" required></textarea><br>
+    <span id="address-error"></span>
+    <br>
+
+    <label for="otp">Enter OTP:</label>
+    <input type="text" id="otp" name="otp" required><br>
+    <span id="otp-error"></span>
+    <br>
+
+    <input type="submit" value="Register">
+    <p id="success-message"></p>
+  </form>
+
+  <div id="error-message"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
